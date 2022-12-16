@@ -1,8 +1,16 @@
-# QQChatGPT
+<h1 align="center">QQChatGPT🤖</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <a href="#" target="_blank">
+    <img alt="License: ISC" src="https://img.shields.io/badge/License-ISC-yellow.svg" />
+  </a>
+</p>
 
 > 用 NoneBot + Go-cqhttp + 其他Robot（ChatGPT, 腾讯小微）等实现一个群里@回复机器人；
-> 
-> NOTICE: ChatGPT 又不支持了，将持续关注最新进度。官方/非官方 API 开启后第一时间接入。
+
+# NOTICE
+
+> 2022-12-26: ChatGPT 又不支持了，将持续关注最新进度。官方/非官方 API 开启后第一时间接入。
 
 ## Install
 
