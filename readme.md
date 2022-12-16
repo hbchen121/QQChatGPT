@@ -1,6 +1,8 @@
 # QQChatGPT
 
 > 用 NoneBot + Go-cqhttp + 其他Robot（ChatGPT, 腾讯小微）等实现一个群里@回复机器人；
+> 
+> NOTICE: ChatGPT 又不支持了，将持续关注最新进度。官方/非官方 API 开启后第一时间接入。
 
 ## Install
 
@@ -18,7 +20,8 @@ git clone git@github.com:hbchen121/QQChatGPT.git
 nb run
 ```
 
-## Others 
+## Others
+
 - 友情提示，先用小号，小心被干掉！
 
 
