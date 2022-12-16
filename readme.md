@@ -17,3 +17,10 @@ git clone git@github.com:hbchen121/QQChatGPT.git
 ```shell 
 nb run
 ```
+
+## Others 
+- 友情提示，先用小号，小心被干掉！
+
+
+
+#### 欢迎莅临我的个人主页：[城南小屋](https://hbchen121.github.io/) 
