@@ -1,5 +1,6 @@
 # encoding: utf-8
 import json
+import time
 import random
 import asyncio
 from nonebot import on_message, on_notice
@@ -26,8 +27,8 @@ chat = on_message(priority=Config.priority)
 # 针对聊天信息
 @chat.handle()
 async def handle_first_receive(bot: Bot, event: Event, state: T_State):
+    begin_time = time.time()
     # 上次响应时间
-    # global tc
     ids = event.get_session_id()
     # 只对于群聊信息进行响应
     if ids.startswith("group"):
@@ -80,8 +81,10 @@ async def handle_first_receive(bot: Bot, event: Event, state: T_State):
             response = await get_response_for_common_user(text_msg, group_id, is_super_user, tc)
             # 如果回应不为空
             if response:
-                # 随机睡一会，防止被检测
-                await asyncio.sleep(random.uniform(*Config.sleep_time))
+                # print("==> runtime: ", time.time() - begin_time)
+                if time.time() - begin_time < Config.sleep_time[0]:
+                    # 随机睡一会，防止被检测
+                    await asyncio.sleep(random.uniform(*Config.sleep_time))
                 # 发送响应字符串
                 await chat.finish(response)
 

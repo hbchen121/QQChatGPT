@@ -2,6 +2,8 @@
 from random import choice
 import asyncio
 from nonebot.adapters.onebot.v11 import GroupMessageEvent, Message, MessageSegment
+from .online_robots.xiaov import get_answer
+
 
 # 用于处理普通用户信息的函数
 async def get_response_for_common_user(text_msg, group_id, is_super_user, tc, **kwargs):
@@ -16,7 +18,8 @@ async def get_response_for_common_user(text_msg, group_id, is_super_user, tc, **
         # 未冷却
         return None
 
-    rsp = f"你好 {text_msg}"
+    rsp = get_answer(text_msg)
+    # rsp = f"你好 {text_msg}"
     # 更新冷却响应时间
     tc.reset_gid(group_id)
 
