@@ -109,3 +109,54 @@ nonebot.load_builtin_plugins("echo")
 此外，插件放在 plugins 里面时会被自动导入，具体插件路径配置在`pyproject.toml`可见。
 
 可以直接使用我的插件，`qqchatgpt/plugins/robot_chat`。
+
+## Linux 安装
+> 建议先搭载 windows 环境，再部署服务器
+
+### go-cqhttp 安装
+
+先查询linux版本
+```shell 
+cat /proc/version
+# amd64
+uname -a
+# x86_64
+```
+
+在 github [release](https://github.com/Mrs4s/go-cqhttp/releases) 中选择对应版本并下载到 windows，
+这里建议参考 [b站教程](https://www.bilibili.com/video/BV1aZ4y1f7e2?p=9&vd_source=6b34769ea077a5ecabfc797ebdd75c9b) 。
+其实就是 
+1. 用linux的文件替代原先 windows 的文件
+2. 替换后的go-cq上传至服务器, `chmod +x go-cqhttp` 给予可执行权限
+3. `./go-cqhttp` 运行
+
+运行完成后，再在服务器的本项目下
+```shell
+nb run
+
+# 或者 sudo 
+sudo /opt/anaconda3/envs/qqbot/bin/nb run
+
+# 如果使用 chatGPT
+sudo xvfb-run --auto-servernum --server-num=1 --server-args='-screen 0, 720x360x24' /opt/anaconda3/envs/qqbot/bin/nb run
+```
+
+注意：服务器端可建议搭建虚拟环境，并安装环境
+```shell 
+pip install nb-cli
+
+pip install nonebot-adapter-onebot
+```
+
+## others
+
+其他好玩的东西：
+
+- [WebChat 网页聊天机器人](https://github.com/hbchen121/WebChat)
+- [QQChatGPT 聊天机器人](https://github.com/hbchen121/QQChatGPT)
+- [WXSA_ROBOT 微信公众平台机器人](https://github.com/hbchen121/wxsa_robot)
+
+
+### 欢迎大家关注我的公众号：
+
+![QCode](images/qcode.png)
