@@ -32,6 +32,15 @@ nb run
 
 - 友情提示，先用小号，小心被干掉！
 
+其他好玩的东西：
+
+- [WebChat 网页聊天机器人](https://github.com/hbchen121/WebChat)
+- [QQChatGPT 聊天机器人](https://github.com/hbchen121/QQChatGPT)
+- [WXSA_ROBOT 微信公众平台机器人](https://github.com/hbchen121/wxsa_robot)
 
 
 #### 欢迎莅临我的个人主页：[城南小屋](https://hbchen121.github.io/) 
+
+### 欢迎大家关注我的公众号：
+
+![QCode](images/qcode.png)
